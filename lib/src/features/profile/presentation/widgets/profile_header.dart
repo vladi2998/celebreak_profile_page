@@ -1,4 +1,6 @@
 // lib/src/features/profile/presentation/widgets/profile_header.dart
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -8,18 +10,20 @@ class ProfileHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double profileBackgroundHeight = 280;
+    final double bottom = profileBackgroundHeight / 4;
+
     return Stack(
       clipBehavior: Clip.none,
       alignment: Alignment.center,
       children: [
         // 1. Background image
         Container(
-          height: profileBackgroundHeight,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/png/user_profile_bg_img.png'),
-              fit: BoxFit.cover,
-            ),
+          margin: EdgeInsets.only(bottom: bottom),
+          child: Image.asset(
+            'assets/images/png/user_profile_bg_img.png',
+            width: double.infinity,
+            height: profileBackgroundHeight,
+            fit: BoxFit.cover,
           ),
         ),
         // 2. Dark Overlay
