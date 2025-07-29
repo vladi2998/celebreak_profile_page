@@ -178,9 +178,40 @@ class UserInfoSection extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text('🧤', style: TextStyle(fontSize: 24)),
-              const Text('🤝', style: TextStyle(fontSize: 24)),
-              const SizedBox(width: 12),
+              Stack(
+                clipBehavior: Clip.none,
+                alignment: Alignment.center,
+                children: [
+                  Positioned(
+                    left: 12,
+                    child: Container(
+                      padding: const EdgeInsets.all(2),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: const Color.fromRGBO(48, 48, 48, 1),
+                          width: 2,
+                        ),
+                        borderRadius: BorderRadius.circular(16),
+                        color: const Color.fromRGBO(21, 21, 21, 1),
+                      ),
+                      child: const Text('🤝', style: TextStyle(fontSize: 14)),
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: const Color.fromRGBO(48, 48, 48, 1),
+                        width: 2,
+                      ),
+                      borderRadius: BorderRadius.circular(16),
+                      color: const Color.fromRGBO(21, 21, 21, 1),
+                    ),
+                    child: const Text('🧤', style: TextStyle(fontSize: 14)),
+                  ),
+                ],
+              ),
+              const SizedBox(width: 24),
               const Text(
                 '7 kudos received',
                 style: TextStyle(
