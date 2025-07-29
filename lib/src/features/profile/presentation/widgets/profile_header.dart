@@ -49,10 +49,16 @@ class ProfileHeader extends StatelessWidget {
           top: 90,
           child: Column(
             children: [
-              const CircleAvatar(
-                radius: 70,
-                backgroundImage: AssetImage(
-                  'assets/images/png/user_profile_img.png',
+              Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.white, width: 4),
+                ),
+                child: const CircleAvatar(
+                  radius: 60,
+                  backgroundImage: AssetImage(
+                    'assets/images/png/user_profile_img.png',
+                  ),
                 ),
               ),
               const SizedBox(height: 12),
@@ -72,13 +78,14 @@ class ProfileHeader extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('🇦🇷 24 yo', style: TextStyle(fontSize: 16)),
-                  SizedBox(width: 16),
-                  Text(
-                    '|',
-                    style: TextStyle(color: Color.fromRGBO(48, 48, 48, 1)),
+                  SvgPicture.asset(
+                    'assets/images/svg/flag_arg.svg',
+                    width: 20,
+                    height: 12.5,
+                    semanticsLabel: 'Argentinas flag icon',
                   ),
-                  SizedBox(width: 16),
+                  Text(' 24 yo', style: TextStyle(fontSize: 16)),
+                  HorizontalDivider(),
                   SvgPicture.asset(
                     'assets/images/svg/ball.svg',
                     width: 20,
@@ -86,12 +93,7 @@ class ProfileHeader extends StatelessWidget {
                     semanticsLabel: 'Foot ball icon',
                   ),
                   Text('DEF', style: TextStyle(fontSize: 16)),
-                  SizedBox(width: 16),
-                  Text(
-                    '|',
-                    style: TextStyle(color: Color.fromRGBO(48, 48, 48, 1)),
-                  ),
-                  SizedBox(width: 16),
+                  HorizontalDivider(),
                   Text(
                     '241',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -103,6 +105,19 @@ class ProfileHeader extends StatelessWidget {
             ],
           ),
         ),
+      ],
+    );
+  }
+}
+
+class HorizontalDivider extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        SizedBox(width: 16),
+        Text('|', style: TextStyle(color: Color.fromRGBO(48, 48, 48, 1))),
+        SizedBox(width: 16),
       ],
     );
   }
