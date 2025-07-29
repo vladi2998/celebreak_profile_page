@@ -80,8 +80,7 @@ class InterestsSection extends StatelessWidget {
           ),
         ),
 
-        const SizedBox(height: 30), // Spacing before bottom separator
-        // Bottom Horizontal Separator
+        const SizedBox(height: 30),
         _buildHorizontalSeparator(screenWidth),
       ],
     );
