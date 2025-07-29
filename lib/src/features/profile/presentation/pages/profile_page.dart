@@ -1,4 +1,5 @@
 // lib/src/features/profile/presentation/pages/profile_page.dart
+import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/horizontal_separator.dart';
 import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/interests_section.dart';
 import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/profile_header.dart';
 import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/user_info_section.dart';
@@ -10,23 +11,28 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const double verticalSpace = 10;
-    return const Scaffold(
+    final screenWidth = MediaQuery.of(context).size.width;
+    final separatorWidth = screenWidth - 20;
+
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ProfileHeader(key: Key('profile_header')),
-            SizedBox(height: verticalSpace),
+            ProfileHeader(key: const Key('profile_header')),
+            const SizedBox(height: verticalSpace),
             // ---- Scrolleable part ----
-            UserInfoSection(key: Key('user_info')),
-            SizedBox(height: verticalSpace),
+            const UserInfoSection(key: Key('user_info')),
+            const SizedBox(height: verticalSpace),
+            HorizontalSeparator(width: separatorWidth),
             // 3. InterestsSection
-            InterestsSection(),
-            SizedBox(height: verticalSpace),
+            const InterestsSection(),
+            const SizedBox(height: verticalSpace),
+            HorizontalSeparator(width: separatorWidth),
             // 4. FootballSkills
-            SizedBox(height: verticalSpace),
+            const SizedBox(height: verticalSpace),
             // 5. UpcomingGames
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
           ],
         ),
       ),

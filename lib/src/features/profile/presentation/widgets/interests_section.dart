@@ -30,7 +30,6 @@ class InterestsSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        _buildHorizontalSeparator(screenWidth),
         const SizedBox(height: 20),
         Padding(
           padding: EdgeInsets.symmetric(
@@ -91,17 +90,7 @@ class InterestsSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 30),
-        _buildHorizontalSeparator(screenWidth),
       ],
-    );
-  }
-
-  // Helper method for the horizontal separator
-  Widget _buildHorizontalSeparator(double screenWidth) {
-    return Container(
-      width: screenWidth * 0.9, // Match the content width
-      height: 1.0,
-      color: const Color.fromRGBO(48, 48, 48, 1),
     );
   }
 }
