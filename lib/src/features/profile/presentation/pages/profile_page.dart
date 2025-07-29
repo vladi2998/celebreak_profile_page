@@ -1,4 +1,5 @@
 // lib/src/features/profile/presentation/pages/profile_page.dart
+import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/interests_section.dart';
 import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/profile_header.dart';
 import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/user_info_section.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,7 @@ class ProfilePage extends StatelessWidget {
             UserInfoSection(key: Key('user_info')),
             SizedBox(height: verticalSpace),
             // 3. InterestsSection
+            InterestsSection(),
             SizedBox(height: verticalSpace),
             // 4. FootballSkills
             SizedBox(height: verticalSpace),
