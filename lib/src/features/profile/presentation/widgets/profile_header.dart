@@ -7,7 +7,7 @@ class ProfileHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double profileBackgroundHeight = 280;
+    final double profileBackgroundHeight = 250;
     final double bottom = profileBackgroundHeight / 4;
 
     return Stack(
@@ -59,7 +59,6 @@ class ProfileHeader extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 12),
               const Text(
                 'Alex Johnson',
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
@@ -72,7 +71,7 @@ class ProfileHeader extends StatelessWidget {
                   color: Color.fromRGBO(174, 174, 178, 1),
                 ),
               ),
-              const SizedBox(height: 12),
+              const SizedBox(height: 4),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

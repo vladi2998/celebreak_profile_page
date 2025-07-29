@@ -8,20 +8,21 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const double verticalSpace = 10;
     return const Scaffold(
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ProfileHeader(key: Key('profile_header')),
-            SizedBox(height: 24),
+            SizedBox(height: verticalSpace),
             // ---- Scrolleable part ----
             UserInfoSection(key: Key('user_info')),
-            SizedBox(height: 24),
+            SizedBox(height: verticalSpace),
             // 3. InterestsSection
-            SizedBox(height: 24),
+            SizedBox(height: verticalSpace),
             // 4. FootballSkills
-            SizedBox(height: 24),
+            SizedBox(height: verticalSpace),
             // 5. UpcomingGames
             SizedBox(height: 32),
           ],
