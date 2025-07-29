@@ -1,6 +1,4 @@
 // lib/src/features/profile/presentation/widgets/profile_header.dart
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
