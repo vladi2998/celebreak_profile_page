@@ -47,6 +47,33 @@ class InterestsSection extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                 ),
               ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 20),
+        Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: screenWidth * (1 - horizontalContentRatio) / 4,
+          ),
+          child: Wrap(
+            spacing: 5.0,
+            runSpacing: 5.0,
+            children: interests.map((interest) {
+              return _InterestBadge(
+                emoji: interest['emoji']!,
+                name: interest['name']!,
+              );
+            }).toList(),
+          ),
+        ),
+        const SizedBox(height: 20),
+
+        Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: screenWidth * (1 - horizontalContentRatio) / 2,
+          ),
+          child: Row(
+            children: [
               GestureDetector(
                 onTap: () {
                   print('See all interests tapped!');
@@ -63,23 +90,6 @@ class InterestsSection extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 20),
-        Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: screenWidth * (1 - horizontalContentRatio) / 2,
-          ),
-          child: Wrap(
-            spacing: 5.0,
-            runSpacing: 5.0,
-            children: interests.map((interest) {
-              return _InterestBadge(
-                emoji: interest['emoji']!,
-                name: interest['name']!,
-              );
-            }).toList(),
-          ),
-        ),
-
         const SizedBox(height: 30),
         _buildHorizontalSeparator(screenWidth),
       ],
@@ -97,7 +107,7 @@ class InterestsSection extends StatelessWidget {
 }
 
 // -------------------------------------------------------------------------- //
-// Private Widget: _InterestBadge (for individual interest items)
+// Private Widget: _InterestBadge (for individual interest badge items)
 // -------------------------------------------------------------------------- //
 class _InterestBadge extends StatelessWidget {
   final String emoji;
