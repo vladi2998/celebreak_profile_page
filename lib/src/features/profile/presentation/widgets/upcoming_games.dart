@@ -147,7 +147,7 @@ class UpcomingGamesSection extends StatelessWidget {
     final gameDate = DateTime(date.year, date.month, date.day);
 
     if (gameDate == today) {
-      return 'Today, ${DateFormat('EEE dd MMMM, yyyy').format(date)}'; // "Today, Tue 17 January, 2023"
+      return 'Today, ${DateFormat('EEE dd MMMM, yyyy').format(date)}';
     } else {
       return DateFormat('EEE dd MMMM, yyyy').format(date);
     }
