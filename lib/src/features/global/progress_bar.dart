@@ -7,7 +7,7 @@ class ProgressBar extends StatelessWidget {
   final double level;
   @override
   Widget build(BuildContext context) {
-    // Ensure level is clamped between 0.0 and 5
+    // Ensure level is clamped between 0.0 and 1
     final clampedLevel = level.clamp(0.0, 1);
 
     return Column(
@@ -41,28 +41,17 @@ class ProgressBar extends StatelessWidget {
             Container(
               height: 8.0,
               decoration: BoxDecoration(
-                color: const Color.fromRGBO(
-                  50,
-                  50,
-                  50,
-                  1,
-                ), // Darker gray for background
+                color: const Color.fromRGBO(50, 50, 50, 1),
                 borderRadius: BorderRadius.circular(5.0),
               ),
             ),
-            // Foreground (filled part) of the progress bar
             LayoutBuilder(
               builder: (context, constraints) {
                 return Container(
                   height: 8.0,
                   width: constraints.maxWidth * clampedLevel,
                   decoration: BoxDecoration(
-                    color: const Color.fromRGBO(
-                      255,
-                      185,
-                      0,
-                      1,
-                    ), // Yellow color for progress
+                    color: const Color.fromRGBO(255, 185, 0, 1),
                     borderRadius: BorderRadius.circular(5.0),
                   ),
                 );
