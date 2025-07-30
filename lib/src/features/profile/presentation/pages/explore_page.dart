@@ -1,4 +1,4 @@
-// lib/src/features/profile/presentation/pages/profile_page.dart
+// lib/src/features/profile/presentation/pages/explore_page.dart
 import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/football_skills.dart';
 import 'package:celebreak_profile_page/src/features/global/horizontal_separator.dart';
 import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/interests_section.dart';
@@ -7,8 +7,8 @@ import 'package:celebreak_profile_page/src/features/profile/presentation/widgets
 import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/user_info_section.dart';
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+class ExplorePage extends StatelessWidget {
+  const ExplorePage({super.key});
 
   @override
   Widget build(BuildContext context) {
