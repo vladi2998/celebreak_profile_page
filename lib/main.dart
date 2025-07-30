@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.black,
           foregroundColor: Colors.white,
         ),
-        fontFamily: 'Montserrat',
+        fontFamily: 'SF Pro Display',
         textTheme: Theme.of(
           context,
         ).textTheme.apply(bodyColor: Colors.white, displayColor: Colors.white),
