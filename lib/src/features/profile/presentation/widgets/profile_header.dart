@@ -17,11 +17,28 @@ class ProfileHeader extends StatelessWidget {
         // 1. Background image
         Container(
           margin: EdgeInsets.only(bottom: bottom),
-          child: Image.asset(
-            'assets/images/png/user_profile_bg_img.png',
-            width: double.infinity,
-            height: profileBackgroundHeight,
-            fit: BoxFit.cover,
+          height: profileBackgroundHeight,
+          width: double.infinity,
+          child: Stack(
+            children: [
+              Image.asset(
+                'assets/images/png/user_profile_bg_img.png',
+                width: double.infinity,
+                height: profileBackgroundHeight,
+                fit: BoxFit.cover,
+              ),
+              // fade overlay
+              Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [Colors.transparent, Colors.black],
+                    stops: [0.0, 1.0],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
         // 2. Dark Overlay
