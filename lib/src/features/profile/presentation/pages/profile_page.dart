@@ -1,7 +1,9 @@
 // lib/src/features/profile/presentation/pages/profile_page.dart
-import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/horizontal_separator.dart';
+import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/football_skills.dart';
+import 'package:celebreak_profile_page/src/features/global/horizontal_separator.dart';
 import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/interests_section.dart';
 import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/profile_header.dart';
+import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/upcoming_games.dart';
 import 'package:celebreak_profile_page/src/features/profile/presentation/widgets/user_info_section.dart';
 import 'package:flutter/material.dart';
 
@@ -30,8 +32,11 @@ class ProfilePage extends StatelessWidget {
             const SizedBox(height: verticalSpace),
             HorizontalSeparator(width: separatorWidth),
             // 4. FootballSkills
+            FootballSkillsSection(),
             const SizedBox(height: verticalSpace),
+            HorizontalSeparator(width: separatorWidth),
             // 5. UpcomingGames
+            UpcomingGamesSection(),
             const SizedBox(height: 32),
           ],
         ),
