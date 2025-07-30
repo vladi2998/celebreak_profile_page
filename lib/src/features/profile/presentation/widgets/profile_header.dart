@@ -41,8 +41,6 @@ class ProfileHeader extends StatelessWidget {
             ],
           ),
         ),
-        // 2. Dark Overlay
-        // Container(height: 300, color: Colors.orangeAccent.withOpacity(0.5)),
         // 3. Back and Menu Icons
         Positioned(
           top: 45,
